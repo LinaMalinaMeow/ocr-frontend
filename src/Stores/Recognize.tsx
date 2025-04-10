@@ -18,7 +18,7 @@ export class RecognizeStore implements BaseDataProvider {
 
     @computed
     private get _baseUrl() {
-        return 'http://158.160.111.204:8000/recognize';
+        return 'http://158.160.57.65:8000/recognize';
     }
 
     @computed

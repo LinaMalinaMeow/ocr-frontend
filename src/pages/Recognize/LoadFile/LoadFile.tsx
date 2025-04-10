@@ -27,12 +27,12 @@ export const LoadFile = observer(() => {
 
     return (
         <Flex gap='4' direction='column'>
-            {!currentFile ? 
-                <input type='file' onChange={onChangeInput} accept='.jpg' /> : 
+            {!currentFile ?
+                <input type='file' onChange={onChangeInput} accept='.jpg,.png,.pdf' /> :
                 <img src={image as string} className={styles.image} />
             }
             <Flex gap='4'>
-                {!Boolean(result) && 
+                {!Boolean(result) &&
                     <Button
                         view='action'
                         size='l'
@@ -41,7 +41,7 @@ export const LoadFile = observer(() => {
                         Начать обработку
                     </Button>
                 }
-                {Boolean(currentFile) && 
+                {Boolean(currentFile) &&
                     <Button
                         view='action'
                         size='l'
